@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="application-name" content="Steady" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Steady" />
+    <meta name="description" content="Steady: a study + focus web app with tasks, exams, focus mode, panic mode, analytics, and offline support." />
+
+    <title>Steady</title>
+
+    <link
+      rel="manifest"
+      href="data:application/manifest+json;base64,eyJkZXNjcmlwdGlvbiI6IlN0dWR5ICsgZm9jdXMgd2ViIGFwcCIsInNob3J0X25hbWUiOiJTdGVhZHkiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBiMGYxNCIsImljb25zIjpbeyJwdXJwb3NlIjoiYW55IG1hc2thYmxlIiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJzaXplcyI6IjE5MngxOTIiLCJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSGRwWkhSb1BTSTFNVElpSUdobGFXZG9kRDBpTlRFeUlpQjJhV1YzUW05NFBTSXdJREFnTlRFeUlEVXhNaUkrUEdSbFpuTStQSEJoZEdnZ2FXUTlJbUpzWVdSbElpQmtQU0pOTkRNM0xqa2dNVFV4UVRJeE1DQXlNVEFnTUNBd0lERWdNalUySURRMk5rd3lOVFlnTXpRMlFUa3dJRGt3SURBZ01DQXdJRE16TXk0NU5DQXlNVEZhSWk4K1BHeHBibVZoY2tkeVlXUnBaVzUwSUdsa1BTSm5NU0lnZURFOUlqRTVNQ0lnZVRFOUlqZ3dJaUI0TWowaU5EVXdJaUI1TWowaU5ETXdJaUJuY21Ga2FXVnVkRlZ1YVhSelBTSjFjMlZ5VTNCaFkyVlBibFZ6WlNJK1BITjBiM0FnYjJabWMyVjBQU0l3SWlCemRHOXdMV052Ykc5eVBTSWpabVprTURoaElpOCtQSE4wYjNBZ2IyWm1jMlYwUFNJeElpQnpkRzl3TFdOdmJHOXlQU0lqWmpBNFlUSmlJaTgrUEM5c2FXNWxZWEpIY21Ga2FXVnVkRDQ4YkdsdVpXRnlSM0poWkdsbGJuUWdhV1E5SW1jeUlpQjRNVDBpT0RBaUlIa3hQU0k1TUNJZ2VESTlJalF6TUNJZ2VUSTlJalEzTUNJZ1ozSmhaR2xsYm5SVmJtbDBjejBpZFhObGNsTndZV05sVDI1VmMyVWlQanh6ZEc5d0lHOW1abk5sZEQwaU1DSWdjM1J2Y0MxamIyeHZjajBpSXpabFpUZGpPU0l2UGp4emRHOXdJRzltWm5ObGREMGlNU0lnYzNSdmNDMWpiMnh2Y2owaUl6RmhZVFpoTmlJdlBqd3ZiR2x1WldGeVIzSmhaR2xsYm5RK1BHeHBibVZoY2tkeVlXUnBaVzUwSUdsa1BTSm5NeUlnZURFOUlqRXlNQ0lnZVRFOUlqWXdJaUI0TWowaU5ESXdJaUI1TWowaU5ETXdJaUJuY21Ga2FXVnVkRlZ1YVhSelBTSjFjMlZ5VTNCaFkyVlBibFZ6WlNJK1BITjBiM0FnYjJabWMyVjBQU0l3SWlCemRHOXdMV052Ykc5eVBTSWpObUkzWTJabUlpOCtQSE4wYjNBZ2IyWm1jMlYwUFNJeElpQnpkRzl3TFdOdmJHOXlQU0lqTTJFMFltSm1JaTgrUEM5c2FXNWxZWEpIY21Ga2FXVnVkRDQ4TDJSbFpuTStQR2MrUEhWelpTQm9jbVZtUFNJallteGhaR1VpSUdacGJHdzlJblZ5YkNnalp6RXBJaTgrUEhWelpTQm9jbVZtUFNJallteGhaR1VpSUdacGJHdzlJblZ5YkNnalp6SXBJaUIwY21GdWMyWnZjbTA5SW5KdmRHRjBaU2d4TWpBZ01qVTJJREkxTmlraUx6NDhkWE5sSUdoeVpXWTlJaU5pYkdGa1pTSWdabWxzYkQwaWRYSnNLQ05uTXlraUlIUnlZVzV6Wm05eWJUMGljbTkwWVhSbEtESTBNQ0F5TlRZZ01qVTJLU0l2UGp3dlp6NDhZMmx5WTJ4bElHTjRQU0l5TlRZaUlHTjVQU0l5TlRZaUlISTlJamN5SWlCbWFXeHNQU0lqWm1abVptWm1JaTgrUEM5emRtYysifSx7InB1cnBvc2UiOiJhbnkgbWFza2FibGUiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCIsInNpemVzIjoiNTEyeDUxMiIsInNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIZHBaSFJvUFNJMU1USWlJR2hsYVdkb2REMGlOVEV5SWlCMmFXVjNRbTk0UFNJd0lEQWdOVEV5SURVeE1pSStQR1JsWm5NK1BIQmhkR2dnYVdROUltSnNZV1JsSWlCa1BTSk5ORE0zTGprZ01UVXhRVEl4TUNBeU1UQWdNQ0F3SURFZ01qVTJJRFEyTmt3eU5UWWdNelEyUVRrd0lEa3dJREFnTUNBd0lETXpNeTQ1TkNBeU1URmFJaTgrUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKbk1TSWdlREU5SWpFNU1DSWdlVEU5SWpnd0lpQjRNajBpTkRVd0lpQjVNajBpTkRNd0lpQm5jbUZrYVdWdWRGVnVhWFJ6UFNKMWMyVnlVM0JoWTJWUGJsVnpaU0krUEhOMGIzQWdiMlptYzJWMFBTSXdJaUJ6ZEc5d0xXTnZiRzl5UFNJalptWmtNRGhoSWk4K1BITjBiM0FnYjJabWMyVjBQU0l4SWlCemRHOXdMV052Ykc5eVBTSWpaakE0WVRKaUlpOCtQQzlzYVc1bFlYSkhjbUZrYVdWdWRENDhiR2x1WldGeVIzSmhaR2xsYm5RZ2FXUTlJbWN5SWlCNE1UMGlPREFpSUhreFBTSTVNQ0lnZURJOUlqUXpNQ0lnZVRJOUlqUTNNQ0lnWjNKaFpHbGxiblJWYm1sMGN6MGlkWE5sY2xOd1lXTmxUMjVWYzJVaVBqeHpkRzl3SUc5bVpuTmxkRDBpTUNJZ2MzUnZjQzFqYjJ4dmNqMGlJelpsWlRkak9TSXZQanh6ZEc5d0lHOW1abk5sZEQwaU1TSWdjM1J2Y0MxamIyeHZjajBpSXpGaFlUWmhOaUl2UGp3dmJHbHVaV0Z5UjNKaFpHbGxiblErUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKbk15SWdlREU5SWpFeU1DSWdlVEU5SWpZd0lpQjRNajBpTkRJd0lpQjVNajBpTkRNd0lpQm5jbUZrYVdWdWRGVnVhWFJ6UFNKMWMyVnlVM0JoWTJWUGJsVnpaU0krUEhOMGIzQWdiMlptYzJWMFBTSXdJaUJ6ZEc5d0xXTnZiRzl5UFNJak5tSTNZMlptSWk4K1BITjBiM0FnYjJabWMyVjBQU0l4SWlCemRHOXdMV052Ykc5eVBTSWpNMkUwWW1KbUlpOCtQQzlzYVc1bFlYSkhjbUZrYVdWdWRENDhMMlJsWm5NK1BHYytQSFZ6WlNCb2NtVm1QU0lqWW14aFpHVWlJR1pwYkd3OUluVnliQ2dqWnpFcElpOCtQSFZ6WlNCb2NtVm1QU0lqWW14aFpHVWlJR1pwYkd3OUluVnliQ2dqWnpJcElpQjBjbUZ1YzJadmNtMDlJbkp2ZEdGMFpTZ3hNakFnTWpVMklESTFOaWtpTHo0OGRYTmxJR2h5WldZOUlpTmliR0ZrWlNJZ1ptbHNiRDBpZFhKc0tDTm5NeWtpSUhSeVlXNXpabTl5YlQwaWNtOTBZWFJsS0RJME1DQXlOVFlnTWpVMktTSXZQand2Wno0OFkybHlZMnhsSUdONFBTSXlOVFlpSUdONVBTSXlOVFlpSUhJOUlqY3lJaUJtYVd4c1BTSWpabVptWm1abUlpOCtQQzl6ZG1jKyJ9XSwidGhlbWVfY29sb3IiOiIjMGIwZjE0IiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJuYW1lIjoiU3RlYWR5Iiwic2NvcGUiOiIuLyIsInN0YXJ0X3VybCI6Ii4vIn0="
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PHBhdGggaWQ9ImJsYWRlIiBkPSJNNDM3LjkgMTUxQTIxMCAyMTAgMCAwIDEgMjU2IDQ2NkwyNTYgMzQ2QTkwIDkwIDAgMCAwIDMzMy45NCAyMTFaIi8+PGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDE9IjE5MCIgeTE9IjgwIiB4Mj0iNDUwIiB5Mj0iNDMwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZkMDhhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjA4YTJiIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImcyIiB4MT0iODAiIHkxPSI5MCIgeDI9IjQzMCIgeTI9IjQ3MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzZlZTdjOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFhYTZhNiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnMyIgeDE9IjEyMCIgeTE9IjYwIiB4Mj0iNDIwIiB5Mj0iNDMwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNmI3Y2ZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjM2E0YmJmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGc+PHVzZSBocmVmPSIjYmxhZGUiIGZpbGw9InVybCgjZzEpIi8+PHVzZSBocmVmPSIjYmxhZGUiIGZpbGw9InVybCgjZzIpIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjAgMjU2IDI1NikiLz48dXNlIGhyZWY9IiNibGFkZSIgZmlsbD0idXJsKCNnMykiIHRyYW5zZm9ybT0icm90YXRlKDI0MCAyNTYgMjU2KSIvPjwvZz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjcyIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PHBhdGggaWQ9ImJsYWRlIiBkPSJNNDM3LjkgMTUxQTIxMCAyMTAgMCAwIDEgMjU2IDQ2NkwyNTYgMzQ2QTkwIDkwIDAgMCAwIDMzMy45NCAyMTFaIi8+PGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDE9IjE5MCIgeTE9IjgwIiB4Mj0iNDUwIiB5Mj0iNDMwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZkMDhhIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjA4YTJiIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImcyIiB4MT0iODAiIHkxPSI5MCIgeDI9IjQzMCIgeTI9IjQ3MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzZlZTdjOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFhYTZhNiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnMyIgeDE9IjEyMCIgeTE9IjYwIiB4Mj0iNDIwIiB5Mj0iNDMwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNmI3Y2ZmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjM2E0YmJmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGc+PHVzZSBocmVmPSIjYmxhZGUiIGZpbGw9InVybCgjZzEpIi8+PHVzZSBocmVmPSIjYmxhZGUiIGZpbGw9InVybCgjZzIpIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjAgMjU2IDI1NikiLz48dXNlIGhyZWY9IiNibGFkZSIgZmlsbD0idXJsKCNnMykiIHRyYW5zZm9ybT0icm90YXRlKDI0MCAyNTYgMjU2KSIvPjwvZz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjcyIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="app" id="app">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand" aria-label="Steady">
+          <div class="brand__logo" aria-hidden="true">
+            <svg class="logo-mark" viewBox="0 0 512 512" role="img" aria-hidden="true" focusable="false">
+              <defs>
+                <path id="blade" d="M437.9 151A210 210 0 0 1 256 466L256 346A90 90 0 0 0 333.94 211Z" />
+                <linearGradient id="g1" x1="190" y1="80" x2="450" y2="430" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#ffd08a" />
+                  <stop offset="1" stop-color="#f08a2b" />
+                </linearGradient>
+                <linearGradient id="g2" x1="80" y1="90" x2="430" y2="470" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#6ee7c9" />
+                  <stop offset="1" stop-color="#1aa6a6" />
+                </linearGradient>
+                <linearGradient id="g3" x1="120" y1="60" x2="420" y2="430" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#6b7cff" />
+                  <stop offset="1" stop-color="#3a4bbf" />
+                </linearGradient>
+              </defs>
+              <g>
+                <use href="#blade" fill="url(#g1)" />
+                <use href="#blade" fill="url(#g2)" transform="rotate(120 256 256)" />
+                <use href="#blade" fill="url(#g3)" transform="rotate(240 256 256)" />
+              </g>
+              <circle cx="256" cy="256" r="72" fill="#ffffff" />
+            </svg>
+          </div>
+          <div class="brand__text">
+            <div class="brand__name">Steady</div>
+            <div class="brand__tag">less panic. Clear focus.</div>
+          </div>
+        </div>
+
+        <nav class="nav" id="nav" aria-label="Primary">
+          <button class="nav__item" type="button" data-route="dashboard">
+            <span class="nav__label">Dashboard</span>
+          </button>
+          <button class="nav__item" type="button" data-route="subjects">
+            <span class="nav__label">Subjects</span>
+          </button>
+          <button class="nav__item" type="button" data-route="exams">
+            <span class="nav__label">Exams</span>
+          </button>
+          <button class="nav__item" type="button" data-route="focus">
+            <span class="nav__label">Focus</span>
+          </button>
+          <button class="nav__item" type="button" data-route="analytics">
+            <span class="nav__label">Analytics</span>
+          </button>
+          <button class="nav__item" type="button" data-route="data">
+            <span class="nav__label">Data</span>
+          </button>
+        </nav>
+
+        <div class="sidebar__actions">
+          <button class="btn btn--danger" id="panicToggle" type="button">Panic Mode</button>
+          <button class="btn btn--primary hidden" id="installBtn" type="button">Install App</button>
+        </div>
+
+        <div class="sidebar__footer">
+          <div class="muted" id="storageStatus"></div>
+          <div class="muted" id="offlineStatus" aria-live="polite"></div>
+        </div>
+      </aside>
+
+      <main class="main" id="main">
+        <header class="topbar" role="banner">
+          <div class="topbar__left">
+            <button class="iconbtn iconbtn--menu" type="button" data-action="ui.sidebarToggle" aria-label="Toggle menu">
+              <span aria-hidden="true">☰</span>
+            </button>
+            <div class="topbar__titles">
+              <h1 class="title" id="viewTitle">Dashboard</h1>
+              <div class="subtitle" id="viewSubtitle"></div>
+            </div>
+          </div>
+          <div class="topbar__actions" id="topbarActions"></div>
+        </header>
+
+        <section class="content" id="view" tabindex="-1"></section>
+      </main>
+    </div>
+
+    <div class="overlay hidden" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal" role="document">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modalTitle"></h2>
+          <button class="iconbtn" type="button" data-action="modal.close" aria-label="Close dialog">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+        <div class="modal__body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <div class="overlay hidden" id="focusOverlay" role="dialog" aria-modal="true" aria-labelledby="focusTitle">
+      <div class="focus" role="document">
+        <div class="focus__header">
+          <div>
+            <div class="focus__eyebrow">Focus Mode</div>
+            <h2 class="focus__title" id="focusTitle"></h2>
+            <div class="focus__meta" id="focusMeta"></div>
+          </div>
+          <button class="iconbtn" type="button" data-action="focus.close" aria-label="Exit focus mode">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <div class="focus__timer">
+          <div class="ring" id="focusRing">
+            <div class="ring__inner">
+              <div class="timer" id="focusTime">25:00</div>
+              <div class="timer__sub" id="focusStatus">Ready</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="focus__controls">
+          <button class="btn btn--primary" type="button" data-action="focus.start">Start</button>
+          <button class="btn" type="button" data-action="focus.pause">Pause</button>
+          <button class="btn" type="button" data-action="focus.resume">Resume</button>
+          <button class="btn btn--ghost" type="button" data-action="focus.reset">Reset</button>
+          <button class="btn btn--ghost" type="button" data-action="focus.fullscreen">Fullscreen</button>
+        </div>
+
+        <div class="focus__options" aria-label="Focus options">
+          <label class="toggle">
+            <input type="checkbox" id="ambientToggle" />
+            <span>Ambient noise</span>
+          </label>
+          <select id="ambientPreset" class="select" aria-label="Ambient preset">
+            <option value="rain">Rain</option>
+            <option value="waves">Waves</option>
+            <option value="brown">Brown noise</option>
+            <option value="fan">Fan</option>
+            <option value="library">Library</option>
+            <option value="white">White noise</option>
+          </select>
+          <label class="range" aria-label="Ambient volume">
+            <span class="range__label">Volume</span>
+            <input type="range" id="ambientVolume" min="0" max="100" value="35" />
+          </label>
+          <label class="toggle toggle--break">
+            <input type="checkbox" id="breakToggle" />
+            <span>Smart breaks</span>
+          </label>
+          <label class="toggle toggle--lock">
+            <input type="checkbox" id="lockToggle" />
+            <span>Focus lock (10 min)</span>
+          </label>
+          <label class="stack">
+            <span class="hint">Session length</span>
+            <select id="focusDuration" class="select" aria-label="Session length">
+              <option value="15">15 min</option>
+              <option value="20">20 min</option>
+              <option value="25" selected>25 min</option>
+              <option value="30">30 min</option>
+              <option value="45">45 min</option>
+              <option value="60">60 min</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="focus__footer" id="focusFooter"></div>
+      </div>
+    </div>
+
+    <div class="overlay hidden" id="panicOverlay" role="dialog" aria-modal="true" aria-labelledby="panicTitle">
+      <div class="panic" role="document">
+        <div class="panic__header">
+          <div>
+            <div class="panic__eyebrow">Panic Mode</div>
+            <h2 class="panic__title" id="panicTitle">Most urgent task</h2>
+            <div class="panic__meta" id="panicMeta"></div>
+          </div>
+          <button class="iconbtn iconbtn--danger" type="button" data-action="panic.close" aria-label="Exit panic mode">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+        <div class="panic__body" id="panicBody"></div>
+      </div>
+    </div>
+
+    <div class="overlay hidden" id="breakOverlay" role="dialog" aria-modal="true" aria-labelledby="breakTitle">
+      <div class="break" role="document">
+        <div class="break__header">
+          <div>
+            <div class="break__eyebrow">Smart Break</div>
+            <h2 class="break__title" id="breakTitle">Reset and breathe</h2>
+            <div class="break__meta" id="breakMeta"></div>
+          </div>
+          <button class="iconbtn" type="button" data-action="break.skip" aria-label="Skip break">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+        <div class="break__timer">
+          <div class="timer" id="breakTime">05:00</div>
+          <div class="timer__sub" id="breakStatus">Breathe in…</div>
+        </div>
+        <div class="break__guide" id="breakGuide"></div>
+        <div class="break__actions">
+          <button class="btn" type="button" data-action="break.skip">Skip break</button>
+          <button class="btn btn--primary" type="button" data-action="break.end">Back to focus</button>
+        </div>
+      </div>
+    </div>
+
+    <input class="hidden" id="importFile" type="file" accept="application/json" />
+    <input class="hidden" id="ambientFile" type="file" accept="audio/mpeg,audio/mp3" />
+    <div class="toastHost" id="toastHost" aria-live="polite" aria-atomic="true"></div>
+
+    <noscript>
+      <div class="noscript">Steady needs JavaScript enabled.</div>
+    </noscript>
+  </body>
+</html>
